@@ -1,0 +1,16 @@
+query GetEqualUser($User_ID: Float!) {
+  getUser(User_ID: $User_ID) {
+    User_ID
+    Face_img
+    Name
+    Address
+    Birthday
+    Mail
+    Pass
+    Age
+    Job
+    Hobby
+    Intro
+    SID
+  }
+}
