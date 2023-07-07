@@ -2,21 +2,21 @@ import { UserContent } from "./components";
 import { GetEqualUserDocument, EqualUser } from "../../generated/graphql";
 import client from "../../lib/graphqlClient";
 type Props = {
-  user: EqualUser;
+  equaluser: EqualUser;
 };
-const Content = ({ user }: Props) => {
-  return <UserContent user={user} />;
+const Content = ({ equaluser }: Props) => {
+  return <UserContent equaluser={equaluser} />;
 };
 export const getServerSideProps = async () => {
-  const user = (
+  const equaluser = (
     await client.query({
       query: GetEqualUserDocument,
-      variables: { User_ID: 1 },
+      variables: { User_ID: 3 },
     })
   ).data;
   return {
     props: {
-      ...user,
+      ...equaluser,
     },
   };
 };
