@@ -1,10 +1,11 @@
 import { EqualUser } from '../../../generated/graphql'
 
 type Props = {
-  user: EqualUser;
+  equaluser: EqualUser
 };
-export const UserContent = ({ user }: Props) => {
-  const { User_ID, Face_img, Name, Address} = user;
+export const UserContent = ({ equaluser }: Props) => {
+  const { User_ID, Face_img, Name, Address} = equaluser|| {};
+
   return (
     <div>
       <p>User_ID: {User_ID}</p>
