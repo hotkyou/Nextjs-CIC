@@ -33,8 +33,9 @@ export default function Form() {
       });
 
       if (response.ok) {
+        const responseData = await response.json();
         // リクエストが成功した場合の処理
-        console.log('データが正常に送信されました');
+        console.log('送信おk サーバーからのリスポンス：', responseData);
       } else {
         // リクエストが失敗した場合の処理
         console.error('データの送信に失敗しました');
