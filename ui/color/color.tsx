@@ -46,5 +46,6 @@ export const GradTxt = styled.p`
     rgba(154, 229, 225, 1) 100%
   );
   color: transparent;
+
   // -webkit-background-clip: text;
   `;
