@@ -1,17 +1,33 @@
-import { EqualUser } from '../../../generated/graphql'
+import useGetEqualUserQuery from '../page';
 
 type Props = {
-  equaluser: EqualUser
+  User_ID: number;
 };
-export const UserContent = ({ equaluser }: Props) => {
-  const { User_ID, Face_img, Name, Address} = equaluser|| {};
+
+const UserComponent = ({ User_ID }: Props) => {
+  const { loading, error, data } = useGetEqualUserQuery({ User_ID });
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+
+  if (!data || !data.getUser) {
+    return <p>No data found</p>;
+  }
+
+  const { Face_img, Name, Address } = data.getUser;
 
   return (
     <div>
-      <p>User_ID: {User_ID}</p>
       <p>Face_img: {Face_img}</p>
       <p>Name: {Name}</p>
       <p>Address: {Address}</p>
     </div>
   );
 };
+
+export default UserComponent;
