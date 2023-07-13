@@ -16,6 +16,12 @@ export type Scalars = {
   DateTime: { input: any; output: any; }
 };
 
+export type Community = {
+  __typename?: 'Community';
+  Community_ID: Scalars['Float']['output'];
+  Community_Name: Scalars['String']['output'];
+};
+
 export type EqualUser = {
   __typename?: 'EqualUser';
   Address: Scalars['String']['output'];
@@ -32,6 +38,22 @@ export type EqualUser = {
   User_ID: Scalars['Float']['output'];
 };
 
+export type GroupChatInput = {
+  __typename?: 'GroupChatInput';
+  Group_Talk_Contet: Scalars['String']['output'];
+  User_ID: Scalars['Float']['output'];
+};
+
+export type Groups = {
+  __typename?: 'Groups';
+  Community_ID: Scalars['Float']['output'];
+  Group_Create_Date: Scalars['DateTime']['output'];
+  Group_ID: Scalars['Float']['output'];
+  Group_Name: Scalars['String']['output'];
+  Limit_Num: Scalars['Float']['output'];
+  User_ID: Scalars['Float']['output'];
+};
+
 export type MatchingChatInput = {
   __typename?: 'MatchingChatInput';
   Matching_ID: Scalars['Float']['output'];
@@ -42,7 +64,15 @@ export type MatchingChatInput = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  sendGroupMessage: GroupChatInput;
   sendMessage: MatchingChatInput;
+};
+
+
+export type MutationSendGroupMessageArgs = {
+  Group_ID: Scalars['Float']['input'];
+  Group_Talk_Contet: Scalars['String']['input'];
+  User_ID: Scalars['Float']['input'];
 };
 
 
@@ -55,7 +85,14 @@ export type MutationSendMessageArgs = {
 export type Query = {
   __typename?: 'Query';
   EqualUser: Array<EqualUser>;
+  getAllCommunity: Array<Community>;
+  getGroups: Array<Groups>;
   getUser: EqualUser;
+};
+
+
+export type QueryGetGroupsArgs = {
+  Community_ID: Scalars['Float']['input'];
 };
 
 
@@ -65,7 +102,7 @@ export type QueryGetUserArgs = {
 
 export type Subscription = {
   __typename?: 'Subscription';
-  messageSent: MatchingChatInput;
+  messageSent: GroupChatInput;
 };
 
 export type GetEqualUserQueryVariables = Exact<{
