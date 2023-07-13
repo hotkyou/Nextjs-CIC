@@ -1,7 +1,7 @@
 # CIC FrontEnd NextJS
 
 ## CIC 全概要
-- FrontEnd NextJS port:3001
+- FrontEnd NextJS port:3030
 - BackEnd NestJS port:3000
 - AIServer Django port:8000
 
