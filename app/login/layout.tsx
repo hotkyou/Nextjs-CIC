@@ -10,6 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    
     <>
       <TitleSpace>
         <Back href="/">
