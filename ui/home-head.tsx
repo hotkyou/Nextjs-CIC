@@ -3,6 +3,8 @@
 import { Bg_div_PG } from '@/ui/color/color';
 import { Pseudoelement } from '@/ui/pseudoelement';
 import styled from 'styled-components';
+import Image from 'next/image';
+import { S_Circle } from '@/ui/Community/icon_s';
 
 const Dummy = styled.div`
   width: 35px;
@@ -48,16 +50,28 @@ const Serch = styled.input.attrs({
 export default function HomeHeader() {
   return (
     <>
-      <div className="flex items-center justify-around">
-        <div>
-          <Dummy />
+      <div className="flex items-center justify-around m-auto">
+        <div className='mx-2'>
+          <S_Circle>
+            <Image
+              src="/comm/test_icon01.svg"
+              alt="comm_message_icon"
+              width={35}
+              height={35}
+            />
+          </S_Circle>
         </div>
-        <SerchWrap>
+        <SerchWrap className=' mr-auto ml-auto'>
           <Bg_div_PG />
           <Serch />
         </SerchWrap>
-        <div>
-          <Dummy />
+        <div className=' mx-2'>
+          <Image
+            src="/comm/mail.svg"
+            alt="comm_message_icon"
+            width={35}
+            height={35}
+          />
         </div>
       </div>
     </>

@@ -1,10 +1,11 @@
 // 外部アカウント
+// 下に出ているツイッターとグーグルのボタンの画面
 'use client';
 import styled from 'styled-components';
 import FlexCenter from './center';
 import Image from 'next/image';
 
-const Externaltab = styled.div`
+  const Externaltab = styled.div`
   width: 100%;
   height: 240px;
   padding-top: 20px;
