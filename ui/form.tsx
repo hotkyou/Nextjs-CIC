@@ -10,9 +10,12 @@ import {
   Label,
 } from './createAccount/formItem';
 import { useState } from 'react';
+import { useRouter } from "next/navigation";
 
 export default function Form() {
   const [formData, setFormData] = useState({ name1: '', name2: '', year: '', month: '', day: '', tel: '', address: '', password: '', password2: '' })
+
+  const router = useRouter();
 
   const data = {
     Name: formData.name1 + formData.name2,
@@ -36,6 +39,7 @@ export default function Form() {
         const responseData = await response.json();
         // リクエストが成功した場合の処理
         console.log('送信おk サーバーからのリスポンス：', responseData);
+        router.push('/');
       } else {
         // リクエストが失敗した場合の処理
         console.error('データの送信に失敗しました');
