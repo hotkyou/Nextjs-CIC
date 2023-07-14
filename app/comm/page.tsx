@@ -7,6 +7,9 @@ import Image from "next/image";
 import { Inder } from "next/font/google";
 import Icon_size from "@/ui/Community/icon_s";
 import Comment from "@/ui/communityItem/comment";
+import NavigationBar from "@/ui/navigation-bar";
+import { Button } from "@/ui/button/button";
+import { FlexCenter_L, FlexCenter_S, FlexSquare } from "@/ui/Community/circle";
 
 // import icon_S
 // import icon_M
@@ -15,45 +18,46 @@ import Comment from "@/ui/communityItem/comment";
 export default function Comm() {
   return (
     <>
-    
-      <div>
-        <Icon_size></Icon_size>
-      </div>
-      <NavLink></NavLink>
-      <h1>コミュニティ アカウント作成</h1>
-      <div className="">
-        <span className="h-6 w-9">
-          ✕
-        </span>
-        <span className="h-6 w-9 top-0 right-5">
-          作成
-        </span>
+      <div className="flex justify-center ">
+        <div className="text-3xl pt-3 pl-0">
+          ＜
+        </div>
+
+        <div className="text-3xl h-6 pt-3">
+          コミュニティ
+        </div>
       </div>
 
-
-      <Posting></Posting>
-      <CreateGroup></CreateGroup>
       
-      <div className=" bg-red-400">
-        <Image
-          src="/comm/comm_add_messege.svg"
-          alt="comm_message_icon"
-          width={30}
-          height={30}
-        />
-      </div>
 
-      <div className=" text-3xl">
-        ✕
-      </div>
-      
-      <div className=" text-3xl h-6 ">
-        作成
-      </div>
-      
-      {/* <Posting></Posting> */}
-      <CreateGroup></CreateGroup>
+      <div className=' relative w-36 h-36 '>
+        <FlexCenter_L>
+          <FlexSquare>
+          </FlexSquare>
+        </FlexCenter_L>
 
+        <FlexCenter_S>
+          <Image
+            src="/comm/test_icon01.svg"
+            alt="comm_message_icon"
+            width={35}
+            height={35}
+          />
+        </FlexCenter_S>
+
+
+        <div className="mt-80 text-center">
+          <Button className=" text-center px-4 py-2">
+            アカウント作成
+          </Button>
+        </div>
+
+
+        <div className="fixed bottom-0 w-full">
+          <NavigationBar />
+        </div>
+
+      </div>
     </>
-  );
+      );
 }

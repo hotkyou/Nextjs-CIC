@@ -64,6 +64,7 @@ const Tag = styled.div`
   padding: 16px;
   border-radius: 10px;
   background: #fff;
+  
 `;
 
 const Text = styled.label`
@@ -80,7 +81,7 @@ export default function CreateGroup() {
   return (
     <>
       <form className="m-auto w-80">
-        <div className=" flex  items-center justify-between border border-solid border-red-500">
+        <div className=" flex  items-center justify-between">
           <figure className="h-16 w-16 rounded-full bg-blue-300"></figure>
           <CreateUserName>
             <input
@@ -105,7 +106,7 @@ export default function CreateGroup() {
           <label className="absolute bottom-32 left-6 z-10 bg-white px-4 py-1">
             <Text>タグ</Text>
           </label>
-          <Tag>#タグ01</Tag>
+          <Tag className=''>#タグ01</Tag>
         </GroupeBg>
         <p className="text-red-400">
           タグを設定することによってグループを簡単に見つけることができます。

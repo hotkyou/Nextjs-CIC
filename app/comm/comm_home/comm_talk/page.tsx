@@ -33,9 +33,11 @@ export default function comm_talk() {
 
         </S_Circle>
 
-        <textarea className=" mx-5 h-36 w-80 pb-10">
-          
-        </textarea>
+        <textarea className=" mx-5 h-36 w-80 pb-10 pt-2"
+        name="group-detail"
+        placeholder="テキストを入力"
+        />
+        
       </div>
     </>
   );

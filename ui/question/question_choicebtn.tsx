@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import Checkbox from './question_button';
+import { Checkbox } from './questuin.style';
 
 const Button__border = styled.div`
   background: #fff;
@@ -12,6 +12,15 @@ const Button__border = styled.div`
   text-align: center;
   border-radius: 25px;
   color: #8ad8d4;
+`;
+const Border__bottom = styled.div`
+  width: 75%;
+  height: 2px;
+  background: linear-gradient(
+    -90deg,
+    rgba(244, 188, 247, 1) 0%,
+    rgba(154, 229, 225, 1) 100%
+  );
 `;
 
 const Button = styled.div`

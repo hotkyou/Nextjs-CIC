@@ -49,6 +49,7 @@ const [formData, setFormData] = useState({ name: ''})
     return (
       <>
         <CreateGroup></CreateGroup>
+        
         <form  onSubmit={handleSubmit} className="mx-auto mt-6 flex w-60 flex-col items-center">
         <div className="mb-6 w-full">
 
