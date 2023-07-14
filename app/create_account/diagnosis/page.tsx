@@ -31,7 +31,7 @@ export default function DiagnosisStart() {
       </Navlink_all>
 
       <Diagnosis />
-      <Button_link>診断を始める</Button_link>
+      <Button_link href="/create_account/diagnosis/1">診断を始める</Button_link>
     </>
   );
 }

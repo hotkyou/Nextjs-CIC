@@ -7,7 +7,7 @@ import NavLink from '@/ui/nav_link/navlink';
 import NavLink_now from '@/ui/nav_link/navlink_now';
 import Image from 'next/image';
 
-export default function DiagnosisStart() {
+export default function Completion() {
   return (
     <>
       <div>

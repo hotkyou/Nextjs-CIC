@@ -31,7 +31,7 @@ export default function Login() {
         // リクエストが成功した場合の処理
         console.log("送信おk サーバーからのリスポンス：", responseData.token);
         cookies.set("token", responseData.token, { expires: 7, path: "/" });
-        router.push("/comm");
+        router.push("/comm/register");
       } else {
         // リクエストが失敗した場合の処理
         console.error("データの送信に失敗しました");

@@ -2,13 +2,10 @@
 'use client';
 
 import styled from 'styled-components';
+import { Bg_PG } from '../color/color';
 
 export const Button = styled.button`
-  background: linear-gradient(
-    90deg,
-    rgba(244, 188, 247, 1) 0%,
-    rgba(154, 229, 225, 1) 100%
-  );
+  ${Bg_PG}
   width: 162px;
   height: 42px;
   border-radius: 25px;
@@ -19,11 +16,7 @@ export const Button = styled.button`
   text-align: center;
 `;
 export const Button_link = styled.a`
-  background: linear-gradient(
-    90deg,
-    rgba(244, 188, 247, 1) 0%,
-    rgba(154, 229, 225, 1) 100%
-  );
+  ${Bg_PG}
   width: 162px;
   height: 42px;
   display: block;
@@ -39,12 +32,7 @@ export const Button_link = styled.a`
 export const Button_bg = styled.div`
   width: 162px;
   height: 42px;
-  background: linear-gradient(
-    90deg,
-    rgba(244, 188, 247, 1) 0%,
-    rgba(154, 229, 225, 1) 100%
-  );
-  display: flex;
+  ${Bg_PG} display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
@@ -73,21 +61,5 @@ export const Button__border_link = styled.a`
   font-weight: bold;
   font-size: 14px;
   margin: auto;
-  text-align: center;
-`;
-
-export const Button_min = styled.button`
-  background: linear-gradient(
-    90deg,
-    rgba(244, 188, 247, 1) 0%,
-    rgba(154, 229, 225, 1) 100%
-  );
-  width: 108px;
-  height: 32px;
-  border-radius: 25px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  margin: 0 auto;
   text-align: center;
 `;

@@ -6,21 +6,18 @@ import Image from 'next/image';
 
 export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: {
-    userInfo: string;
-  };
 }) {
   return (
+    
     <>
-      {/* <TitleSpace>
+      <TitleSpace>
         <Back href="/">
           <Image src="/arrow_back.svg" width={24} height={24} alt="logo" />
         </Back>
-        <TitleText>{params.userInfo}</TitleText>
-      </TitleSpace> */}
+        <TitleText>コミュニティ</TitleText>
+      </TitleSpace>
       {children}
     </>
   );
